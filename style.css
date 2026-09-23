@@ -1,0 +1,173 @@
+/* configuracao geral */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* topo */
+
+header {
+    background-color: #333333;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #cccccc;
+}
+
+/* conteudo */
+
+main {
+    padding: 20px 0;
+}
+
+/* formulario */
+
+#formulario {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#formulario h2 {
+    text-align: center;
+}
+
+/* campos */
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label,
+.pergunta {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo input[type="file"],
+.campo input[type="password"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    border-radius: 4px;
+}
+
+.campo textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* respostas com caixa de marcar: texto a esquerda, caixa a direita */
+
+.resposta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 5px auto;
+    font-weight: normal;
+}
+
+.resposta input {
+    width: 18px;
+    height: 18px;
+}
+
+/* asterisco dos campos obrigatorios */
+
+.obrigatorio {
+    color: red;
+}
+
+/* termos: checkbox ao lado do texto, sem o espacamento de .resposta */
+
+.campo label.termos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+.termos input {
+    width: 18px;
+    height: 18px;
+}
+
+/* botao cadastrar */
+
+#formulario button[type="submit"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#formulario button[type="submit"]:hover {
+    background-color: #555555;
+}
+
+/* mensagem de formulario enviado */
+
+#enviado {
+    width: 60%;
+    margin: 10px auto 20px auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(76, 175, 80, 0.25);
+    border: 1px solid rgba(76, 175, 80, 0.55);
+    border-radius: 6px;
+    color: #1b5e20;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: none;
+}
+
+#enviado h2 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+}
+
+#enviado p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#enviado:target {
+    display: block;
+}
+
+/* rodape */
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
