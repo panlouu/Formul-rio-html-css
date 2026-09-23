@@ -1,0 +1,268 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #222222;
+    line-height: 1.5;
+}
+
+/* ==============================
+   CABEÇALHO E NAVEGAÇÃO
+   ============================== */
+
+.site-header {
+    background-color: #333333;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 16px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    color: #cccccc;
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+.main-content {
+    width: min(100% - 32px, 900px);
+    margin: 0 auto;
+    padding: 32px 0 24px;
+}
+
+/* ==============================
+   FORMULÁRIO
+   ============================== */
+
+.formulario {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+.form-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.form-header p {
+    margin: 0;
+    color: #555555;
+}
+
+/* ==============================
+   CAMPOS
+   ============================== */
+
+.campo {
+    margin: 0 0 20px;
+    padding: 0;
+    border: 0;
+}
+
+.campo > label,
+.campo legend {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.campo legend {
+    padding: 0;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo input[type="password"],
+.campo input[type="file"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #222222;
+    font: inherit;
+}
+
+.campo textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #555555;
+    outline-offset: 1px;
+}
+
+/* ==============================
+   RADIO E CHECKBOX
+   ============================== */
+
+.resposta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 500px);
+    margin: 7px auto;
+    font-weight: normal;
+}
+
+.resposta input,
+.termos input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+.termos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+/* ==============================
+   CAMPOS OBRIGATÓRIOS
+   ============================== */
+
+.obrigatorio {
+    color: #c62828;
+}
+
+/* ==============================
+   BOTÃO
+   ============================== */
+
+.formulario button[type="submit"] {
+    display: block;
+    margin: 28px auto 0;
+    padding: 11px 32px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.formulario button[type="submit"]:hover,
+.formulario button[type="submit"]:focus-visible {
+    background-color: #555555;
+}
+
+/* ==============================
+   MENSAGEM DE SUCESSO
+   ============================== */
+
+.mensagem-sucesso {
+    display: none;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 16px 20px;
+    text-align: center;
+    background-color: rgba(76, 175, 80, 0.18);
+    border: 1px solid rgba(76, 175, 80, 0.55);
+    border-radius: 6px;
+    color: #1b5e20;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.mensagem-sucesso h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.mensagem-sucesso p {
+    margin: 0;
+}
+
+.mensagem-sucesso:target {
+    display: block;
+}
+
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+.site-footer {
+    padding: 22px 16px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 600px) {
+    .main-content {
+        width: min(100% - 20px, 900px);
+        padding-top: 20px;
+    }
+
+    .formulario {
+        padding: 22px 18px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+}
