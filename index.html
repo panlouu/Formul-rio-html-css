@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 e Formulários</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- topo -->
+<header>
+	<nav>
+		<a href="#inicio">Início</a>
+		<a href="#sobre">Sobre</a>
+	</nav>
+</header>
+
+<!-- formulário de cadastro -->
+<main id="inicio">
+<form id="formulario" action="#enviado" method="get">
+	<h2>Formulário de Cadastro</h2>
+
+	<div class="campo">
+		<label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+		<input type="text" id="nome" name="nome" placeholder="Escreva sua resposta aqui" required>
+	</div>
+
+	<div class="campo">
+		<label for="email">E-mail <span class="obrigatorio">*</span></label>
+		<input type="email" id="email" name="email" placeholder="Escreva sua resposta aqui" required>
+	</div>
+
+	<div class="campo">
+		<label for="nascimento">Data de nascimento <span class="obrigatorio">*</span></label>
+		<input type="date" id="nascimento" name="nascimento" required>
+	</div>
+
+	<div class="campo">
+		<label for="telefone">Telefone <span class="obrigatorio">*</span></label>
+		<input type="tel" id="telefone" name="telefone" placeholder="Escreva sua resposta aqui" required>
+	</div>
+
+		<!-- senha -->
+	<div class="campo">
+		<label for="senha">Senha <span class="obrigatorio">*</span></label>
+		<input
+			type="password"
+			id="senha"
+			name="senha"
+			placeholder="Escreva sua resposta aqui"
+			minlength="6"
+			required
+		>
+	</div>
+
+	<div class="campo">
+		<label for="curso">Curso <span class="obrigatorio">*</span></label>
+		<select id="curso" name="curso" required>
+			<option value="">Selecione uma opção</option>
+			<option value="ads">Análise e Desenvolvimento de Sistemas</option>
+			<option value="cc">Ciência da Computação</option>
+			<option value="si">Sistemas de Informação</option>
+		</select>
+	</div>
+
+	<div class="campo">
+		<span class="pergunta">Turno de preferência: <span class="obrigatorio">*</span></span>
+
+		<label class="resposta">
+			<span>Manhã</span>
+			<input type="radio" name="turno" value="manha" required>
+		</label>
+
+		<label class="resposta">
+			<span>Tarde</span>
+			<input type="radio" name="turno" value="tarde">
+		</label>
+
+		<label class="resposta">
+			<span>Noite</span>
+			<input type="radio" name="turno" value="noite">
+		</label>
+	</div>
+
+	<div class="campo">
+		<span class="pergunta">Áreas de interesse:</span>
+
+		<label class="resposta">
+			<span>Front-End</span>
+			<input type="checkbox" name="interesse" value="front">
+		</label>
+
+		<label class="resposta">
+			<span>Back-End</span>
+			<input type="checkbox" name="interesse" value="back">
+		</label>
+
+		<label class="resposta">
+			<span>Banco de Dados</span>
+			<input type="checkbox" name="interesse" value="banco">
+		</label>
+	</div>
+
+	<div class="campo">
+		<label for="curriculo">Envie seu currículo (PDF): <span class="obrigatorio">*</span></label>
+		<input
+			type="file"
+			id="curriculo"
+			name="curriculo"
+			accept=".pdf"
+			required
+		>
+	</div>
+
+	<div class="campo">
+		<label for="porque">Por que deseja se cadastrar?</label>
+		<textarea
+			id="porque"
+			name="porque"
+			placeholder="Escreva sua resposta aqui"
+		></textarea>
+	</div>
+
+	<div class="campo">
+		<label for="mensagem">Mensagem adicional:</label>
+		<textarea
+			id="mensagem"
+			name="mensagem"
+			placeholder="Escreva sua resposta aqui"
+		></textarea>
+	</div>
+
+	<div class="campo">
+		<span class="pergunta">Termos de uso: <span class="obrigatorio">*</span></span>
+
+		<label class="termos">
+			Aceito os termos de uso
+			<input type="checkbox" name="termos" required>
+		</label>
+	</div>
+
+	<button type="submit">Cadastrar</button>
+</form>
+
+<!-- aviso de formulário enviado -->
+<div id="enviado">
+	<h2>&#10004; Formulário Enviado</h2>
+	<p>Seu cadastro foi realizado com sucesso.</p>
+</div>
+
+</main>
+
+<!-- rodapé -->
+<footer id="sobre">
+	<p>&copy;2026 TODOS OS DIREITOS ESTÃO RESERVADOS</p>
+</footer>
+
+</body>
+</html>
